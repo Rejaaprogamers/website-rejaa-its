@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websitee Codingg Rejaa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .top-bar {
+            background: #013880;
+            color: white;
+            padding: 5px 0;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .main-header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .logo img {
+            height: 80px;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-nav a {
+            color: #013880;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: #0056b3;
+        }
+
+        .hero {
+            position: relative;
+            height: 700px;
+            background: url('https://pahamify.com/wp-content/uploads/2021/03/Daya-Tampung-ITS-01.png') center/cover;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(1, 56, 128, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .news-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-card-content {
+            padding: 20px;
+        }
+
+        footer {
+            background: #013880;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div>Selamat Datang Di Website Rejaa Coding</div>
+            <div>Website Dimana Rejaa Ingin Memasuki Institut Teknologi Sepuluh Nopember</div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="2015-institut-teknologi-sepuluh-nopember-removebg-preview.png" alt="Logo Its">
+             </div>
+             <nav class="main-nav">
+                <a href="#">Jangan Menyerahhh!!</a>
+                <a>Tetap Semangattt!!</a>
+                <a>Jangan Putus Asa!!</a>
+                <a>Belajarr Yang Giatt!!</a>
+                <a>Bangkit Kembalii!!</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Institut Teknologi Sepuluh Nopember</h1>
+                <strong>Kamu tidak perlu menjadi luar biasa untuk memulai, tapi kamu harus memulai untuk menjadi luar biasa</strong>
+            </div>
+        </div>
+    </section>
+    <div class="music-container">
+        <div class="music-controls">
+            <div class="judul-musik">
+                Lagu Untukku:
+            </div>
+            <audio id="bgMusic" autoplay loop>
+                <source src="Aku Yang Jatuh Cinta - Dudy Oris (Tiktok Version).mp3" type="audio/mpeg">
+            </audio>
+            
+            <button onclick="document.getElementById('bgMusic').play()">⏵</button>
+            <button onclick="document.getElementById('bgMusic').pause()">⏸</button>
+            
+            <div class="volume-control">
+                <span>Volume:</span>
+                <input type="range" min="0" max="1" step="0.1" value="0.5" 
+                       oninput="document.getElementById('bgMusic').volume = this.value">
+             </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.onload = function() {
+            var music = document.getElementById('bgMusic');
+            var playPromise = music.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    console.log("Musik berhasil diputar otomatis");
+                })
+                .catch(error => {
+                    console.log("Autoplay diblokir oleh browser");
+                });
+            }
+        }
+    </script>
+    <style>
+        .judul-musik {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 5px; 
+        }
+
+          .music-container {
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+        .music-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+.music-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+    </style>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <h2>Hal Yang Harus Diraih:</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <img src="ITS Buka Lowongan Kerja Dosen.jpeg" alt="News 1">
+                <div class="news-card-content">
+                    <h3>Tempat Terindah.</h3>
+                    <p>Aku Harus Bisa Foto Di Tempat Ini Dengan Menggunakan Almamaterku.</p>
+                </div>
+            </article>
+            <article class="news-card">
+                <img src="WhatsApp Image 2024-11-10 at 11.28.50_c8db2c83.jpg" alt="News 2">
+                <div class="news-card-content">
+                    <h3>Almamater.</h3>
+                    <p>Aku Harus Bisa Mendapatkan Almamater Ini Dengan Usaha Ataupun Kerja Kerja Kerasku.</p>
+                </div>
+            </article>
+            <article class="news-card">
+                <img src="its.jpg" alt="News 3">
+                <div class="news-card-content">
+                    <h3>Pemandangan Terindah.</h3>
+                    <p>Aku Harus Bisa Melihat Pemandangan Indah Ini Dengan Menggunakan Almamaterku.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Gagal Kemudian Menyerah?</h3>
+                <p>Apa itu Menyerahh</p>
+                <p>Jangan biarkan kegagalan menghentikanmu. Belajarlah dari kesalahan dan lanjutkan perjalananmu</p>
+            </div>
+            <div>
+                <h3>Patah Semangat?</h3>
+                <p>Apaan Itu Patah Semangattt</p>
+                <p>Berusaha menampilkan yang terbaik dari yang baik, berusaha di atas meski bukan di puncak. Doa masih dipanjatkan,  Semangat usaha masih dilakukan, harapan sudah ditetapkan</p>
+            </div>
+            <div>
+                <h3>Takut Untuk Mencoba?</h3>
+                <p>Apaa Ituu Takutt</p>
+                <p>Rasa takut bisa dilawan dengan rasa yakin, keberanian, dan hati yang bijak</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
